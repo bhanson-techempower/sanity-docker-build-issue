@@ -1,9 +1,19 @@
-# Sanity Clean Content Studio
+# Sanity Docker Bug Report
 
-Congratulations, you have now installed the Sanity Content Studio, an open source real-time content editing environment connected to the Sanity backend.
+Trying to build with docker:
 
-Now you can do the following things:
+```bash
+docker build -t sanity-docker .
+```
 
-- [Read “getting started” in the docs](https://www.sanity.io/docs/introduction/getting-started?utm_source=readme)
-- [Join the community Slack](https://slack.sanity.io/?utm_source=readme)
-- [Extend and build plugins](https://www.sanity.io/docs/content-studio/extending?utm_source=readme)
+Results in this error:
+
+```
+ > [build 10/10] RUN ["npx", "sanity", "build"]:
+#17 1.469 - Clean output folder
+#17 1.471 ✔ Clean output folder (2ms)
+#17 1.471 - Build Sanity Studio
+#17 2.340 ✖ Build Sanity Studio
+#17 2.340
+#17 2.340 Error: EINVAL: invalid argument, scandir '/proc/30/net'
+```
