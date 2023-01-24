@@ -18,7 +18,7 @@ Results in this error:
 #17 2.340 Error: EINVAL: invalid argument, scandir '/proc/30/net'
 ```
 
-Reproducible both with colima on darwin/arm64:
+Reproducible with colima on darwin/arm64:
 
 
 ```
@@ -83,4 +83,37 @@ Server: Docker Engine - Community
  docker-init:
   Version:          0.19.0
   GitCommit:        de40ad0
+```
+
+And on linux/amd64:
+
+```
+Client:
+ Version:           20.10.17
+ API version:       1.41
+ Go version:        go1.17.10
+ Git commit:        v20.10.17
+ Built:             Thu Jan  1 00:00:00 1970
+ OS/Arch:           linux/amd64
+ Context:           default
+ Experimental:      true
+
+Server:
+ Engine:
+  Version:          20.10.20
+  API version:      1.41 (minimum version 1.12)
+  Go version:       go1.18.7
+  Git commit:       03df974ae9e6c219862907efdd76ec2e77ec930b
+  Built:            Wed Oct 19 02:58:31 2022
+  OS/Arch:          linux/amd64
+  Experimental:     false
+ containerd:
+  Version:          v1.6.8
+  GitCommit:        9cd3357b7fd7218e4aec3eae239db1f68a5a6ec6
+ runc:
+  Version:          1.1.4
+  GitCommit:        5fd4c4d144137e991c4acebb2146ab1483a97925
+ docker-init:
+  Version:          0.19.0
+  GitCommit:
 ```
